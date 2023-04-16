@@ -9,15 +9,6 @@ const ingredients = [
 
 const ulEl = document.querySelector('#ingredients');
 
-// const elements = ingredients.map(ingredient => {
-//   const ingEl = document.createElement('li');
-//   ingEl.classList.add('item');
-//   ingEl.textContent = ingredient;
-
-//   return ingEl;
-// });
-// ulEl.append(...elements);
-
 const createIngredient = ingred => {
   return ingred.map(ingredient => {
     const ingEl = document.createElement('li');

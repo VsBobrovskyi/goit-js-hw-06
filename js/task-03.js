@@ -13,32 +13,15 @@ const images = [
   },
 ];
 
-// !====== через createElement
-// const ulEl = document.querySelector('.gallery');
-// console.log(ulEl)
-
-// images.forEach(({url, alt}) => {
-//   const liEl = document.createElement('li');
-//   const imgEl = document.createElement('img');
-// imgEl.src = url;
-// imgEl.alt = alt;
-// imgEl.width = 300;
-// liEl.appendChild(imgEl);
-// ulEl.appendChild(liEl);
-// });
-
-
-
 const ulEl = document.querySelector('.gallery');
 // console.log(images);
 
-const createMark = ({url, alt}) => {
+const createMark = ({ url, alt }) => {
   return `
-  <li><img src = ${url} width = 300 alt = '${alt}'></li>`
-}
+  <li><img src = ${url} width = 300 alt = '${alt}'></li>`;
+};
 
 const createRows = images.map(createMark).join('');
 // console.log(createRows)
-
 
 ulEl.insertAdjacentHTML('afterbegin', createRows);

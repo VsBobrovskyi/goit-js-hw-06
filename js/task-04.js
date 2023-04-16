@@ -1,23 +1,19 @@
 let counterValue = 0;
 
-const rezult = document.getElementById('value')
+const rezult = document.getElementById('value');
 const btnIncrement = document.querySelector('[data-action="increment"]');
-console.log(btnIncrement);
+
 const btnDecrement = document.querySelector('[data-action="decrement"]');
-console.log(btnDecrement);
 
 const plusOne = () => {
   counterValue += 1;
-  return rezult.textContent = counterValue;
-}
+  return (rezult.textContent = counterValue);
+};
 
 const minusOne = () => {
   counterValue -= 1;
-  return rezult.textContent = counterValue;
-}
-
-console.log(counterValue);
-console.log(rezult);
+  return (rezult.textContent = counterValue);
+};
 
 btnIncrement.addEventListener('click', plusOne);
 btnDecrement.addEventListener('click', minusOne);
